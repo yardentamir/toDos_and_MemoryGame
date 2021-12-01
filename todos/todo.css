@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap");
+
+/* variables */
+:root {
+  --primaryColor: #d92895;
+  --secondaryColor: #ede9fe;
+  --mainWhite: #fff;
+  --mainBlack: #222;
+  --mainGrey: #7c7c7c;
+  --mainSpacing: 0.1rem;
+  --mainTransition: all 0.3s linear;
+  --mainRed: #db2777;
+  --bodyColor: #f6f6f6;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  flex-direction: column;
+  background-color: var(--bodyColor);
+  font-family: "Zen Kurenaido", sans-serif;
+}
+
+header {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  color: var(--primaryColor);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.form-container {
+  display: flex;
+}
+
+form {
+  width: 25rem;
+  background-color: var(--mainWhite);
+  display: flex;
+  justify-content: space-between;
+}
+
+form input {
+  flex: 1;
+}
+
+form input,
+form button {
+  border: none;
+  outline: none;
+  background-color: var(--mainWhite);
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+form button {
+  color: var(--primaryColor);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+form button:hover {
+  background-color: var(--primaryColor);
+  color: var(--mainWhite);
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.3rem 0;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--secondaryColor);
+}
+
+.todo-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.todo li {
+  flex: 1;
+  color: var(--primaryColor);
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
+
+.todo span {
+  display: block;
+  font-size: 1rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.fa-check-square,
+.fa-square {
+  color: var(--primaryColor);
+}
+
+.fa-trash-alt {
+  color: var(--mainRed);
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+select {
+  appearance: none;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  width: 100%;
+  color: var(--primaryColor);
+  cursor: pointer;
+}
+.select {
+  margin-left: 1rem;
+  background-color: var(--mainWhite);
+  cursor: pointer;
+  width: 10rem;
+  font-weight: bold;
+  position: relative;
+}
+
+.select::after {
+  content: "\25bc";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.8rem 0.4rem;
+  color: var(--primaryColor);
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.select:hover::after {
+  content: "\25bc";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.8rem 0.4rem;
+  background-color: var(--primaryColor);
+  color: var(--mainWhite);
+  pointer-events: none;
+}
